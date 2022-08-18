@@ -1,0 +1,34 @@
+{
+    "name": "ItemHolderActions",
+    "maps": [
+        {
+            "name": "Drop",
+            "id": "0fcc32c5-817e-458a-8436-49d47368470c",
+            "actions": [
+                {
+                    "name": "DropItem",
+                    "type": "Button",
+                    "id": "bde473e6-36fa-4b0a-bbb9-06e7cdffdf35",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "65c670e4-daae-4c11-b091-7affe8189f06",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DropItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

@@ -14529,6 +14529,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PT_Grass_02 (115)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 8c71f03fcb0c13644a30696cafc5cda8, type: 3}
+      propertyPath: m_LODs.Array.data[2].screenRelativeHeight
+      value: 0.005210126
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c71f03fcb0c13644a30696cafc5cda8, type: 3}
 --- !u!4 &951463576 stripped
