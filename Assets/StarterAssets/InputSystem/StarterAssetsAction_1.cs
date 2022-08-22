@@ -15,10 +15,10 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public partial class StarterAssetsAction2 : IInputActionCollection2, IDisposable
+public partial class StarterAssetsAction : IInputActionCollection2, IDisposable
 {
     public InputActionAsset asset { get; }
-    public StarterAssetsAction2()
+    public StarterAssetsAction()
     {
         asset = InputActionAsset.FromJson(@"{
     ""name"": ""StarterAssets"",
@@ -387,8 +387,8 @@ public partial class StarterAssetsAction2 : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_DropItem;
     public struct PlayerActions
     {
-        private StarterAssetsAction2 m_Wrapper;
-        public PlayerActions(StarterAssetsAction2 wrapper) { m_Wrapper = wrapper; }
+        private StarterAssetsAction m_Wrapper;
+        public PlayerActions(StarterAssetsAction wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
