@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3323082}
   - component: {fileID: 2371844}
   - component: {fileID: 6406354}
+  - component: {fileID: 1191100934}
   m_Layer: 0
   m_Name: building_1
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 181254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.63367295, y: 0.63367295, z: 0.63367295}
+  m_LocalScale: {x: 8, y: 8, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -102,3 +103,28 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: bbf8284e783b22c44acad8eef2458f8d, type: 3}
+--- !u!205 &1191100934
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181254}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.07414746, y: 1.8402257, z: 0}
+  m_Size: 3.6829934
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.69955325
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 2371844}
+  - screenRelativeHeight: 0.24431993
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.0067043263
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
