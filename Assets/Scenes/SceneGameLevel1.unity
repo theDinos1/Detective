@@ -8697,6 +8697,7 @@ GameObject:
   - component: {fileID: 539530667}
   - component: {fileID: 539530666}
   - component: {fileID: 539530668}
+  - component: {fileID: 539530669}
   m_Layer: 0
   m_Name: police character
   m_TagString: Untagged
@@ -8806,7 +8807,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 65.9011
     y: 70
-    width: 105.26314
+    width: 108
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8838,11 +8839,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 424.87863, y: 298.85117}
+  scrollPos: {x: 126.17285, y: 181.85072}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 567
-  zoom: 0.7600002
+  zoom: 1
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -8850,7 +8851,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 539530649}
+  - {fileID: 539530654}
   selectedCommands: []
   variables:
   - {fileID: 539530663}
@@ -8878,7 +8879,7 @@ Transform:
   - {fileID: 272739145}
   - {fileID: 1001345452}
   m_Father: {fileID: 797883458}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &539530652
 MonoBehaviour:
@@ -8920,9 +8921,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 254.53268
-    y: 133.38345
-    width: 63.15789
+    x: 253.53268
+    y: 134.38345
+    width: 64
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8951,7 +8952,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 246.69269
     y: -14.317536
-    width: 69.73683
+    width: 70
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9596,9 +9597,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 18
   indentLevel: 0
-  targetObject: {fileID: 0}
-  methodName: 
-  delay: 0
+  targetObject: {fileID: 539530644}
+  methodName: GameOver
+  delay: 2
+--- !u!114 &539530669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539530644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f0dbdaf4ff047a44bcfce6ac88dcda0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &540219975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12944,8 +12957,8 @@ Transform:
   m_Children:
   - {fileID: 1655896483}
   - {fileID: 897322411}
-  - {fileID: 1044657114}
   - {fileID: 539530651}
+  - {fileID: 1044657114}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26451,8 +26464,9 @@ GameObject:
   - component: {fileID: 1655896523}
   - component: {fileID: 1655896522}
   - component: {fileID: 1655896510}
+  - component: {fileID: 1655896525}
   m_Layer: 0
-  m_Name: 04
+  m_Name: Aladin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26471,7 +26485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 86.32791, y: 229.9337}
+  scrollPos: {x: 80.17432, y: 168.73581}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 491
@@ -26667,7 +26681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 234.0001
+    x: 235.0001
     y: 26.818886
     width: 78
     height: 40
@@ -26700,7 +26714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 231.05887
+    x: 229.6303
     y: 172.93669
     width: 109
     height: 40
@@ -26955,7 +26969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 429.39374
+    x: 431.39374
     y: 18.818878
     width: 81
     height: 40
@@ -27273,9 +27287,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 31
   indentLevel: 0
-  targetObject: {fileID: 0}
-  methodName: 
-  delay: 0
+  targetObject: {fileID: 1655896477}
+  methodName: GameOver
+  delay: 1
 --- !u!114 &1655896514
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -27533,6 +27547,18 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &1655896525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655896477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f0dbdaf4ff047a44bcfce6ac88dcda0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1660668374 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1785591782901661920, guid: de21fcba2a244aa4d942c4756095e21a, type: 3}
