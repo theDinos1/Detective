@@ -1,10 +1,16 @@
+using System;
 using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {
     [SerializeField] private LayerMask layerMask;
     [SerializeField] private Camera camera;
-    [SerializeField] private Inventory inventory;
+    public static Inventory inventory;
+
+    private void Start()
+    {
+        inventory = GetComponent<Inventory>();
+    }
     void FixedUpdate()
     {
         RayCast();
@@ -13,21 +19,28 @@ public class ItemManager : MonoBehaviour
     private void RayCast()
     {
         RaycastHit hit;
-        if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, Mathf.Infinity, layerMask))
+        Debug.DrawRay(camera.transform.position, camera.transform.forward, Color.yellow, 2f);
+        if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, 3f, layerMask))
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                Item item; 
+                Object item;
                 bool isItemnNotNull = hit.transform.TryGetComponent(out item);
-                if(isItemnNotNull) Pickup(item);
+                if (isItemnNotNull)
+                {
+                    item.Use();
+                }
             }
         }
     }
-
-    private void Pickup(Item item)
+    public static void Pickup(Item item)
     {
-        Debug.Log($"Pick up {item.itemName}.");
-        inventory.AddItem(item);
-        item.DestroyModel();
+        inventory.AddItem(item.itemInfo);
+        Destroy(item.gameObject);
     }
+    public static void RemoveItem(ItemInfo item)
+    {
+        inventory.RemoveItem(item);
+    }
+
 }

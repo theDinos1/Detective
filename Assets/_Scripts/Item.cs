@@ -2,14 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public class Item : Object
 {
-    public string itemName;
-
-    public void DestroyModel()
+    public override void Use()
     {
-        Destroy(GetComponent<Rigidbody>());
-        Destroy(GetComponent<Collider>());
-        Destroy(GetComponent<Renderer>());
+        ItemManager.Pickup(this);
     }
 }
