@@ -6,6 +6,10 @@ public class NPCFunctions : MonoBehaviour
     {
         GameSceneManager.instance.LoadScene(Constant.SCENE_GAMEOVER);
     }
+    public void GameWin()
+    {
+        GameSceneManager.instance.LoadScene(Constant.SCENE_GAMEWIN);
+    }
     public void SetPlayerOnDialog()
     {
         GameSceneManager.instance.SetCursorNormal();

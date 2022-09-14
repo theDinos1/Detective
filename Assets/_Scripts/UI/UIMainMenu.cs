@@ -12,4 +12,8 @@ public class UIMainMenu : MonoBehaviour
     {
         GameSceneManager.instance.QuitGame();
     }
+    public void Back()
+    {
+        GameSceneManager.instance.LoadScene(Constant.SCENE_GAMEWIN);
+    }
 }

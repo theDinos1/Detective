@@ -8,4 +8,5 @@ public static class Constant
     public const string SCENE_MAINMENU = "MainMenu";
     public const string SCENE_GAME = "Game";
     public const string SCENE_GAMEOVER = "GameOver";
+    public const string SCENE_GAMEWIN = "GameWin";
 }
