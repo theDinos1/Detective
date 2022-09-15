@@ -12,4 +12,5 @@ public abstract class Object : MonoBehaviour
 public class ItemInfo
 {
     public string itemName;
+    public Sprite icon;
 }

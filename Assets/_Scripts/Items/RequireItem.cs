@@ -7,7 +7,7 @@ public class RequireItem : Object
     public override void Use()
     {
         Debug.Log("Use");
-        ItemInfo item = ItemManager.inventory.items.FirstOrDefault(i => i.itemName == _RequireName);
+        ItemInfo item = GameSceneManager.instance.gameData.inventory.items.FirstOrDefault(i => i.itemName == _RequireName);
         if (item != null)
         {
             ItemManager.RemoveItem(item);

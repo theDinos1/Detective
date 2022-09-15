@@ -5,21 +5,22 @@ using UnityEngine;
 public class ElectricBox : RequireItem
 {
     [SerializeField] private string _TimeLineSceneName;
+    [SerializeField] private float _TimeLineSceneDurations;
     public override void Use()
     {
-        ItemInfo[] items = ItemManager.inventory.items;
+        ItemInfo[] items = GameSceneManager.instance.gameData.inventory.items;
         foreach (ItemInfo item in items)
         {
-            if(item != null)
+            if (item != null)
             {
-                if(item.itemName == _RequireName)
+                if (item.itemName == _RequireName)
                 {
-                    ItemManager.RemoveItem(items.FirstOrDefault(i => i.itemName == _RequireName));
+                    //ItemManager.RemoveItem(item);
                     Debug.Log($"Use {_RequireName}");
-                    // TODO: load timeline 1
+                    GameSceneManager.instance.LoadScene(_TimeLineSceneName, _TimeLineSceneDurations);
                 }
             }
-        }      
+        }
 
     }
 }
